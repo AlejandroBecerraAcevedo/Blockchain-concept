@@ -74,16 +74,12 @@ while(True):
         sender = input("Enter sender's address: ")
         receiver = input("Enter receiver's address: ")
         amount = int(input("Enter amount: "))
-        transaction = Transaction(sender, receiver, amount)  # Create a transaction
-
-        if amount <= 0:
-            print("Invalid Amount")            
-            print("\n")
-            break
+        transaction = Transaction(sender, receiver, amount)  # Create a transaction    
+            
 
         # Check if both wallets exist and if the sender has enough balance
         if db.wallet_exists(sender) and db.wallet_exists(receiver):
-            if db.check_balance(sender) >= amount:
+            if db.check_balance(sender) >= amount and amount > 0:
                 # Perform the transfer by updating balances and recording the transaction
                 db.get_wallet_by_public_key(sender).deposit(-amount)
                 db.get_wallet_by_public_key(receiver).deposit(amount)
@@ -92,7 +88,7 @@ while(True):
                 db.get_wallet_by_public_key(sender).set_transaction(transaction)
                 db.get_wallet_by_public_key(receiver).set_transaction(transaction)
             else:
-                print("Insufficient tokens")
+                print("Invalid Amount")
             print(f"Balance remaining for sender: {db.walletSenderBalance(sender)}")
         else:
             print("Invalid Address")
