@@ -51,15 +51,15 @@ El código define una clase llamada DataBase que actúa como un almacén para ge
 
 ### Almacenamiento de carteras: 
 
-    La clase permite añadir nuevas carteras al sistema y consultar las existentes a través de su clave pública. También puede verificar si una cartera ya está registrada y obtener su saldo.
+La clase permite añadir nuevas carteras al sistema y consultar las existentes a través de su clave pública. También puede verificar si una cartera ya está registrada y obtener su saldo.
 
 ### Gestión de transacciones: 
 
-    Las transacciones pueden añadirse a la base de datos, y cada transacción incluye detalles como el remitente, el receptor y la cantidad transferida. Se puede consultar todas las transacciones y encontrar una específica por el bloque al que pertenece.
+Las transacciones pueden añadirse a la base de datos, y cada transacción incluye detalles como el remitente, el receptor y la cantidad transferida. Se puede consultar todas las transacciones y encontrar una específica por el bloque al que pertenece.
 
 ### Manipulación de bloques: 
 
-    Los bloques que contienen transacciones pueden ser añadidos a la base de datos. Se imprimen los detalles de cada bloque (hash, raíz de Merkle, transacciones, etc.), y se puede consultar el bloque anterior o buscar uno específico por su hash.
+Los bloques que contienen transacciones pueden ser añadidos a la base de datos. Se imprimen los detalles de cada bloque (hash, raíz de Merkle, transacciones, etc.), y se puede consultar el bloque anterior o buscar uno específico por su hash.
 
 ## wallet.py
 
