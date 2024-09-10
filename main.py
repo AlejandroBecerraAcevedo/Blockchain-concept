@@ -76,6 +76,11 @@ while(True):
         amount = int(input("Enter amount: "))
         transaction = Transaction(sender, receiver, amount)  # Create a transaction
 
+        if amount <= 0:
+            print("Invalid Amount")            
+            print("\n")
+            break
+
         # Check if both wallets exist and if the sender has enough balance
         if db.wallet_exists(sender) and db.wallet_exists(receiver):
             if db.check_balance(sender) >= amount:
