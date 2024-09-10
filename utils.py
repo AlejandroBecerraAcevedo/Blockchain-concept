@@ -3,6 +3,7 @@ import random
 
 class RandomWords:
     def __init__(self):
+        # A list of predefined words
         self.words = [
             "apple", "banana", "grape", "orange", "lemon", "cherry", "strawberry", "blueberry", 
             "watermelon", "peach", "pear", "plum", "pineapple", "mango", "kiwi", "papaya", 
@@ -14,33 +15,35 @@ class RandomWords:
         
         self.random_words = self.concatenate()
        
-
+    # A string containing three randomly selected words concatenated together
     def get_random_words(self):
         return random.sample(self.words, 3)
-
+    
+    # concatenated words
     def concatenate(self):
         self.random_words = self.get_random_words()
         return " ".join(self.random_words)
 
+# generating a SHA-256 hash from an input string.
 class Hashing:
     def __init__(self, dataIn):
         self.data = dataIn
-        self.hash = self.hashing_code()      
+        self.hash = self.hashing_code() # Generates the hash during initialization
 
     def hashing_code(self):
         # Datos de entrada
-        data_encode = self.data.encode()  # Convertimos la cadena a bytes
+        data_encode = self.data.encode()  # Convert string to bytes
 
-        # Crear un objeto hash SHA-256
+        # Create SHA-256 hash object
         sha256_hash = hashlib.sha256()
 
-        # Actualizar el objeto hash con los datos
+        # Update hash with data
         sha256_hash.update(data_encode)
 
-        # Obtener el valor hash en formato hexadecimal
+        # Generate final hash
         hash_final = sha256_hash.hexdigest()
 
-        #print(f"El hash SHA-256 de {self.data} es: {hash_final} \n")
+        # Return hex hash
 
         return hash_final
     
