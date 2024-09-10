@@ -30,7 +30,7 @@ run_app = main()
 # Infinite loop to display the menu and handle user choices
 while(True):
     print("\n1. Create Wallet")
-    print("2. Deposit")
+    print("2. Deposit (proof of concept)")
     print("3. Send Coin")
     print("4. Mine Block")
     print("5. Check Blockchain")

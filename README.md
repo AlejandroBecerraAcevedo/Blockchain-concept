@@ -124,15 +124,18 @@ Este código define una aplicación de simulación de una cadena de bloques (blo
 Inicializa la aplicación creando el bloque génesis (primer bloque de la cadena) si aún no se ha creado.
 ### Opciones del menú:
 Crear una cartera: Permite a los usuarios generar una nueva cartera con una clave pública y privada derivada de palabras aleatorias.
-### Depositar: 
+### Depositar (Prueba de concepto): 
+
+Se parte pensando en que el bloque es un bloque n y que se tiene cierta cantidad de monedas, la función depositar consiste en inicializar una wallet con un número de coins que pueda transferir.
 
 Añade una cantidad de tokens a la cartera de un usuario.
-### Enviar monedas: 
+### Enviar monedas (): 
 
 Permite transferir tokens de una cartera a otra siempre que el remitente tenga suficientes fondos.
 
 ### Minar un bloque: 
-Minar un nuevo bloque que contiene las transacciones pendientes, validando las transacciones y añadiendo el bloque a la cadena.
+Minar un nuevo bloque que contiene las transacciones pendientes, validando las transacciones y añadiendo el bloque a la cadena, realizando la prueba de trabajo con cierta dificultad
+
 ### Ver la cadena de bloques: 
 
 Muestra todos los bloques en la cadena con sus detalles.
