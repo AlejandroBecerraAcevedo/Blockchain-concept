@@ -6,6 +6,8 @@ Este proyecto simula el funcionamiento básico de una cadena de bloques (blockch
 Se debe tener en cuenta que este proyecto esta realizado 100% en python con la versión Python 3.12.5
 y para ser ejecutado vasta con ejecutar la siguiente linea de comando:
 
+#### Primer paso es abrir VScode
+
 #### Clonar el repositorio:
 ```bash
 git clone https://github.com/AlejandroBecerraAcevedo/Blockchain-concept.git
